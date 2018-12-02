@@ -18,10 +18,18 @@ void addFirst(int data) {
 
 }
 
+void removeAt(int index) {
+	for (int i = index; i < count - 1; i++) {
+		arr[i] = arr[i + 1];
+	}
+	count--;
+}
+
 void show() {
 	for (int i = 0; i < count; i++) {
 		printf("%d ", arr[i]);
 	}
+	printf("\n");
 }
 
 int main(void) {
@@ -30,6 +38,8 @@ int main(void) {
 	addBack(7);
 	addFirst(3);
 	addFirst(4);
+	show();
+	removeAt(1);
 	show();
 	system("pause");
 	return 0;
